@@ -28,11 +28,13 @@ function attackPredatorNow() {
 
     if (superAttackAlien == true && alienPanzerung > 40) {
         alienPanzerung -= attackAlien * 2;
+        predatorCoin += attackAlien * 2;
         console.log("Super Attack!");
     }
 
     else if (alienPanzerung > 0) {
         alienPanzerung -= attackAlien;
+        predatorCoin += attackAlien;
         console.log("Alien wurde angegriffen!");
     }
 
@@ -44,17 +46,5 @@ function attackPredatorNow() {
     if (alienPanzerung <= 10 && alienPanzerung > 0) {
         console.log("Shuttle is in Danger!");
     }
-}
-
-function statusPredatorSpaceshipLog(){
-    console.log("Name of Spaceship: " + predatorSpaceship);
-    console.log("Panzerung des Shuttle noch zu " + predatorPanzerung + "% gegeben!");
-    console.log("Dein Kontostand:" + predatorCoin);
-}
-
-function statusAlienSpaceshipLog(){
-    console.log("Name of Spaceship: " + alienSpaceship);
-    console.log("Panzerung des Shuttle noch zu " + alienPanzerung + "% gegeben!");
-    console.log("Dein Kontostand:" + alienCoin);
 }
 
