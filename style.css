@@ -1,0 +1,169 @@
+/* PREDATOR VS ALIEN – SCI-FI DESIGN */
+
+/* ===== GRUNDLAYOUT ===== */
+
+body {
+    background: radial-gradient(
+        circle at top,
+        #172338,
+        #05070d 70%
+    );
+    color: #e5edf7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* ===== ÜBERSCHRIFTEN ===== */
+
+h2 {
+    color: #ff4141;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #ff4141;
+    padding-bottom: 10px;
+    margin-top: 25px;
+}
+
+h3 {
+    color: #39d9ff;
+    margin-top: 35px;
+}
+
+/* ===== STATUSBEREICHE ===== */
+
+#renderSpaceshipStatusPredator,
+#renderSpaceshipStatusAlien {
+    background-color: rgba(15, 25, 42, 0.95);
+    color: #e5edf7;
+    border: 1px solid #34445e;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 500px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px rgba(30, 150, 255, 0.12);
+    box-sizing: border-box;
+}
+
+/* ===== TABELLEN ===== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #e5edf7;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #34445e;
+    color: #e5edf7;
+}
+
+td:first-child {
+    color: #9fb4d0;
+    font-weight: bold;
+}
+
+/* ===== EINGABEFELDER ===== */
+
+input {
+    background-color: #101827;
+    color: #ffffff;
+    border: 1px solid #39d9ff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+    margin: 8px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #39d9ff;
+}
+
+/* ===== AUSWAHLFELDER ===== */
+
+select {
+    background-color: #101827;
+    color: #ffffff;
+    border: 1px solid #39d9ff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 8px;
+}
+
+/* ===== BUTTONS ===== */
+
+button {
+    background-color: #132d43;
+    color: #39d9ff;
+    border: 1px solid #39d9ff;
+    border-radius: 5px;
+    padding: 11px 16px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s,
+                color 0.2s,
+                box-shadow 0.2s;
+}
+
+button:hover {
+    background-color: #39d9ff;
+    color: #05070d;
+    box-shadow: 0 0 15px #39d9ff;
+}
+
+/* ===== FEHLERMELDUNGEN ===== */
+
+#errorMessage {
+    color: #ff4141;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* ===== ZERSTÖRTE RAUMSCHIFFE ===== */
+
+#renderSpaceshipStatusPredator[style*="background-color"],
+#renderSpaceshipStatusAlien[style*="background-color"] {
+    border: 1px solid #ff4141;
+    box-shadow: 0 0 18px rgba(255, 65, 65, 0.3);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    #renderSpaceshipStatusPredator,
+    #renderSpaceshipStatusAlien {
+        width: 100%;
+        padding: 10px;
+    }
+
+    td {
+        padding: 9px 6px;
+        font-size: 14px;
+    }
+
+    input {
+        max-width: 100%;
+    }
+
+    button {
+        padding: 10px 12px;
+    }
+}

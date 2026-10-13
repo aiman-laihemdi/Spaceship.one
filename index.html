@@ -3,10 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./script.js"></script>
+    <title>Predator vs Alien</title>
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="renderStatusAlien(), renderStatusPredator()">
+    <h2>Status: Predator-Spaceship</h2>
+    <div id="renderSpaceshipStatusPredator"></div>
+
+    <h2>Status: Alien-Spaceship</h2>
+    <div id="renderSpaceshipStatusAlien"></div>
+    
+
+    <h3>Schaden hinzufügen</h3>
+
+    <label for="damageInputAlien">Schadenshöhe:</label>
+    <input type="number" id="damageInputAlien" min="1" value="10">
+    <button onclick="addDamageAlien()">Schaden hinzufügen</button>
+
+    <br></br>
+
+    <label for="damageInputPredator">Schadenshöhe:</label>
+    <input type="number" id="damageInputPredator" min="1" value="10">
+    <button onclick="addDamagePredator()">Schaden hinzufügen</button>
+
+    <p id="errorMessage"></p>
+
+    
+<h3>Reparaturkits kaufen</h3>
+
+<label for="repairKitInput">Anzahl der Reparaturkits:</label>
+<input type="number" id="repairKitInput" min="1" value="1">
+
+<button onclick="buyRepairKits()">Reparaturkits kaufen</button>
+
+
+<h3>Reparaturkit benutzen</h3>
+
+<button onclick="useRepairKit()">Ein Reparaturkit verwenden</button>
+
     
 </body>
 </html>
